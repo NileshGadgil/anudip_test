@@ -117,12 +117,12 @@ header{
 .award{
     position: relative;
 }
-.award p{
+.head p{
     position: relative;
     font-size: 16px;
     text-align: center;
 }
-.award p::before{
+.head p::before{
     content: "" ;
     background: url(../images/logo.png) left top no-repeat;
     position: absolute;
