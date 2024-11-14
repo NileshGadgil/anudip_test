@@ -1,7 +1,17 @@
+html {
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 #container{
     max-width: 1200px;
     margin: 0 auto;
-    background: #ececec;
+/*    background: #ececec;*/
 }
 header{
     position: relative;
@@ -116,11 +126,14 @@ header{
 }
 .award{
     position: relative;
+    counter-reset: my-sec-counter;
 }
 .head p{
     position: relative;
-    font-size: 16px;
+    font-size: 25px;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 .head p::before{
     content: "" ;
@@ -129,5 +142,61 @@ header{
     width: 36px;
     height: 36px;
     top: -36px;
-   
+   left: 580px;
+}
+.head span{
+    text-align: center;
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: normal;
+}
+.award-list{
+    display: grid;
+    position: relative;
+    grid-template-columns: 880px 300px;
+    padding: 20px 20px;
+    margin: 0 0 15px 0;
+    border: 1px solid #000000;
+}
+.award-list::before {
+    /* Increment "my-sec-counter" by 1 */
+    counter-increment: my-sec-counter;
+    content: "A" counter(my-sec-counter) ;
+    background-color: #a75757;
+    border-radius: 33px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 16px;
+    font-size: 20px;
+    padding: 8px 0 0 0;
+    text-align: center;
+  }
+  .left-info{
+    grid-column: 1;
+    padding: 0 0 0 36px;
+  }
+  .left-info h2{
+    margin:0;
+    padding: 0;
+  }
+  .left-info p{
+    margin:0;
+    padding: 0;
+  }
+  .right-info{
+    align-self: top;
+    grid-column: 2;
+    justify-self: end;
+    padding: 5px 10px;
+  }
+.award-description{
+ /*   grid-column: 1;*/
+    font-size: 14px;
+}
+.award-year{
+ 
+    font-size: 12px;
 }

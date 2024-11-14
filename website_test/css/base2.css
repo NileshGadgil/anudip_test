@@ -1,0 +1,19 @@
+#container{
+/*    container-type: inline-size;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ececec;
+}
+.grid-container{
+    display: grid;
+    border: 1px solid #6ce5a2;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+.card{
+    padding: 4px;
+    border: 1px solid #056e6c;
+    border-radius: 8px;
+    background-color: #288684;
+}
